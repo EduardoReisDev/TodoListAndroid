@@ -8,35 +8,26 @@ class ExampleUnitTest {
     @Test
     fun testAddTask() {
         val toDoList = TodoList()
-        toDoList.addTask("Buy groceries")
-        assertTrue(toDoList.tasks.contains("Buy groceries"))
+        toDoList.addTask("Task 1")
+        assertTrue(toDoList.tasks.contains("Task 1"))
     }
 
     @Test
     fun testDeleteTask() {
         val toDoList = TodoList()
-        toDoList.addTask("Buy groceries")
-        toDoList.deleteTask("Buy groceries")
-        assertFalse(toDoList.tasks.contains("Buy groceries"))
-    }
-
-    @Test
-    fun testEditTask() {
-        val toDoList = TodoList()
-        toDoList.addTask("Buy groceries")
-        toDoList.editTask("Buy groceries", "Buy fresh groceries")
-        assertTrue(toDoList.tasks.contains("Buy fresh groceries"))
-        assertFalse(toDoList.tasks.contains("Buy groceries"))
+        toDoList.addTask("Task 1")
+        toDoList.deleteTask("Task 1")
+        assertFalse(toDoList.tasks.contains("Task 1"))
     }
 
     @Test
     fun testListTasks() {
         val toDoList = TodoList()
-        toDoList.addTask("Buy groceries")
-        toDoList.addTask("Clean the house")
+        toDoList.addTask("Task 1")
+        toDoList.addTask("Task 2")
         val tasks = toDoList.listTasks()
         assertEquals(2, tasks.size)
-        assertTrue(tasks.contains("Buy groceries"))
-        assertTrue(tasks.contains("Clean the house"))
+        assertTrue(tasks.contains("Task 1"))
+        assertTrue(tasks.contains("Task 2"))
     }
 }

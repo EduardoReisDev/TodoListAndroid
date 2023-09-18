@@ -11,13 +11,6 @@ class TodoList {
         tasks.remove(task)
     }
 
-    fun editTask(oldTask: String, newTask: String) {
-        val index = tasks.indexOf(oldTask)
-        if (index != -1) {
-            tasks[index] = newTask
-        }
-    }
-
     fun listTasks(): List<String> {
         return tasks.toList()
     }

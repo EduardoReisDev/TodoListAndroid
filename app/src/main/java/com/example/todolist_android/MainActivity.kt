@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             if (task.isNotEmpty()) {
                 todoList.addTask(task)
                 taskInput.text.clear()
-                listTasks() // Add this line to update the list after adding a task
+                listTasks()
             }
         }
 
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             if (task.isNotEmpty()) {
                 todoList.deleteTask(task)
                 taskInput.text.clear()
-                listTasks() // Add this line to update the list after deleting a task
+                listTasks()
             }
         }
     }
